@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<product productid="10randombanners" active="1">
+	<title>10 Random Banners</title>
+	<description>Rotates 10 admin-defined banners randomly.</description>
+	<version>1.0</version>
+	<url><![CDATA[http://www.vbulletin.org/forum/misc.php?do=productcheck&pid=10randombanners]]></url>
+	<versioncheckurl><![CDATA[http://www.vbulletin.org/forum/misc.php?do=productcheck&pid=10randombanners]]></versioncheckurl>
+	<dependencies>
+	</dependencies>
+	<codes>
+	</codes>
+	<templates>
+	</templates>
+	<plugins>
+		<plugin active="1" executionorder="5">
+			<title>10 Random Banners</title>
+			<hookname>global_start</hookname>
+			<phpcode><![CDATA[if ($vbulletin->options['10rb_on'] == 1) {
+	$banner[1] = $vbulletin->options['10rb_banner1'];
+	$banner[2] = $vbulletin->options['10rb_banner2'];
+	$banner[3] = $vbulletin->options['10rb_banner3'];
+	$banner[4] = $vbulletin->options['10rb_banner4'];
+	$banner[5] = $vbulletin->options['10rb_banner5'];
+	$banner[6] = $vbulletin->options['10rb_banner6'];
+	$banner[7] = $vbulletin->options['10rb_banner7'];
+	$banner[8] = $vbulletin->options['10rb_banner8'];
+	$banner[9] = $vbulletin->options['10rb_banner9'];
+	$banner[10] = $vbulletin->options['10rb_banner10'];
+
+	$random = rand(1, 10);
+	$tenrandombanners = $banner[$random];
+}]]></phpcode>
+		</plugin>
+	</plugins>
+	<phrases>
+		<phrasetype name="vBulletin Settings" fieldname="vbsettings">
+			<phrase name="setting_10rb_banner10_desc" date="1262499066" username="nickbeen" version="1.0"><![CDATA[Fill in the HTML code for the 10th banner. Example: &lt;a href="1" target="2">&lt;img src="3" alt="4" height="5" width="6" border="7" />&lt;/a>]]></phrase>
+			<phrase name="setting_10rb_banner10_title" date="1262499066" username="nickbeen" version="1.0"><![CDATA[Banner 10]]></phrase>
+			<phrase name="setting_10rb_banner1_desc" date="1262499352" username="nickbeen" version="1.0"><![CDATA[Fill in the HTML code for the 1st banner. Example: &lt;a href="1" target="2">&lt;img src="3" alt="4" height="5" width="6" border="7" />&lt;/a>]]></phrase>
+			<phrase name="setting_10rb_banner1_title" date="1262499352" username="nickbeen" version="1.0"><![CDATA[Banner 1]]></phrase>
+			<phrase name="setting_10rb_banner2_desc" date="1262499317" username="nickbeen" version="1.0"><![CDATA[Fill in the HTML code for the 2nd banner. Example: &lt;a href="1" target="2">&lt;img src="3" alt="4" height="5" width="6" border="7" />&lt;/a>]]></phrase>
+			<phrase name="setting_10rb_banner2_title" date="1262499317" username="nickbeen" version="1.0"><![CDATA[Banner 2]]></phrase>
+			<phrase name="setting_10rb_banner3_desc" date="1262499328" username="nickbeen" version="1.0"><![CDATA[Fill in the HTML code for the 3rd banner. Example: &lt;a href="1" target="2">&lt;img src="3" alt="4" height="5" width="6" border="7" />&lt;/a>]]></phrase>
+			<phrase name="setting_10rb_banner3_title" date="1262499328" username="nickbeen" version="1.0"><![CDATA[Banner 3]]></phrase>
+			<phrase name="setting_10rb_banner4_desc" date="1262499260" username="nickbeen" version="1.0"><![CDATA[Fill in the HTML code for the 4th banner. Example: &lt;a href="1" target="2">&lt;img src="3" alt="4" height="5" width="6" border="7" />&lt;/a>]]></phrase>
+			<phrase name="setting_10rb_banner4_title" date="1262499260" username="nickbeen" version="1.0"><![CDATA[Banner 4]]></phrase>
+			<phrase name="setting_10rb_banner5_desc" date="1262499241" username="nickbeen" version="1.0"><![CDATA[Fill in the HTML code for the 5th banner. Example: &lt;a href="1" target="2">&lt;img src="3" alt="4" height="5" width="6" border="7" />&lt;/a>]]></phrase>
+			<phrase name="setting_10rb_banner5_title" date="1262499241" username="nickbeen" version="1.0"><![CDATA[Banner 5]]></phrase>
+			<phrase name="setting_10rb_banner6_desc" date="1262499200" username="nickbeen" version="1.0"><![CDATA[Fill in the HTML code for the 6th banner. Example: &lt;a href="1" target="2">&lt;img src="3" alt="4" height="5" width="6" border="7" />&lt;/a>]]></phrase>
+			<phrase name="setting_10rb_banner6_title" date="1262499200" username="nickbeen" version="1.0"><![CDATA[Banner 6]]></phrase>
+			<phrase name="setting_10rb_banner7_desc" date="1262499179" username="nickbeen" version="1.0"><![CDATA[Fill in the HTML code for the 7th banner. Example: &lt;a href="1" target="2">&lt;img src="3" alt="4" height="5" width="6" border="7" />&lt;/a>]]></phrase>
+			<phrase name="setting_10rb_banner7_title" date="1262499179" username="nickbeen" version="1.0"><![CDATA[Banner 7]]></phrase>
+			<phrase name="setting_10rb_banner8_desc" date="1262499141" username="nickbeen" version="1.0"><![CDATA[Fill in the HTML code for the 8th banner. Example: &lt;a href="1" target="2">&lt;img src="3" alt="4" height="5" width="6" border="7" />&lt;/a>]]></phrase>
+			<phrase name="setting_10rb_banner8_title" date="1262499141" username="nickbeen" version="1.0"><![CDATA[Banner 8]]></phrase>
+			<phrase name="setting_10rb_banner9_desc" date="1262499156" username="nickbeen" version="1.0"><![CDATA[Fill in the HTML code for the 9th banner. Example: &lt;a href="1" target="2">&lt;img src="3" alt="4" height="5" width="6" border="7" />&lt;/a>]]></phrase>
+			<phrase name="setting_10rb_banner9_title" date="1262499156" username="nickbeen" version="1.0"><![CDATA[Banner 9]]></phrase>
+			<phrase name="setting_10rb_on_desc" date="1262524670" username="nickbeen" version="1.0"><![CDATA[Select 'Yes' to turn this product on. Don't forget to add <b>$tenrandombanners</b> to your template(s)!]]></phrase>
+			<phrase name="setting_10rb_on_title" date="1262524670" username="nickbeen" version="1.0"><![CDATA[Enable product?]]></phrase>
+			<phrase name="settinggroup_10rb" date="1262498506" username="nickbeen" version="1.0"><![CDATA[10 Random Banners]]></phrase>
+		</phrasetype>
+	</phrases>
+	<options>
+		<settinggroup name="10rb" displayorder="65535">
+			<setting varname="10rb_on" displayorder="10">
+				<datatype>free</datatype>
+				<optioncode>yesno</optioncode>
+				<defaultvalue>0</defaultvalue>
+			</setting>
+			<setting varname="10rb_banner1" displayorder="20">
+				<datatype>free</datatype>
+				<optioncode>textarea</optioncode>
+			</setting>
+			<setting varname="10rb_banner2" displayorder="30">
+				<datatype>free</datatype>
+				<optioncode>textarea</optioncode>
+			</setting>
+			<setting varname="10rb_banner3" displayorder="40">
+				<datatype>free</datatype>
+				<optioncode>textarea</optioncode>
+			</setting>
+			<setting varname="10rb_banner4" displayorder="50">
+				<datatype>free</datatype>
+				<optioncode>textarea</optioncode>
+			</setting>
+			<setting varname="10rb_banner5" displayorder="60">
+				<datatype>free</datatype>
+				<optioncode>textarea</optioncode>
+			</setting>
+			<setting varname="10rb_banner6" displayorder="70">
+				<datatype>free</datatype>
+				<optioncode>textarea</optioncode>
+			</setting>
+			<setting varname="10rb_banner7" displayorder="80">
+				<datatype>free</datatype>
+				<optioncode>textarea</optioncode>
+			</setting>
+			<setting varname="10rb_banner8" displayorder="90">
+				<datatype>free</datatype>
+				<optioncode>textarea</optioncode>
+			</setting>
+			<setting varname="10rb_banner9" displayorder="100">
+				<datatype>free</datatype>
+				<optioncode>textarea</optioncode>
+			</setting>
+			<setting varname="10rb_banner10" displayorder="110">
+				<datatype>free</datatype>
+				<optioncode>textarea</optioncode>
+			</setting>
+		</settinggroup>
+	</options>
+	<helptopics>
+	</helptopics>
+	<cronentries>
+	</cronentries>
+	<faqentries>
+	</faqentries>
+</product>
