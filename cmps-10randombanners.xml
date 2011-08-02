@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<moduleinfo>
+	<module>
+		<title>Random Banner</title>
+		<identifier>10randombanners</identifier>
+		<filename>10randombanners.php</filename>
+		<inctype>php_file</inctype>
+		<templatelist>adv_portal_10randombanners</templatelist>
+		<parent />
+		<colspan>0</colspan>
+		<formcode />
+		<useshell>1</useshell>
+		<link />
+		<options>0</options>
+	</module>
+	<templates>
+		<adv_portal_10randombanners><![CDATA[<tr>
+	<td class="alt1">
+		$tenrandombanners
+	</td>
+</tr>]]></adv_portal_10randombanners>
+	</templates>
+	<file><![CDATA[<?php
+require_once DIR . '/includes/adminfunctions_template.php';
+
+if ($vbulletin->options['10rb_on'] == 1) {
+
+	if ($vbulletin->options['10rb_banner1']) {
+		$banner[1] = $vbulletin->options['10rb_banner1'];
+		$numberofbanners = 1;
+		
+		if ($vbulletin->options['10rb_banner2']) {
+			$banner[2] = $vbulletin->options['10rb_banner2'];
+			$numberofbanners = 2;
+			
+			if ($vbulletin->options['10rb_banner3']) {
+				$banner[3] = $vbulletin->options['10rb_banner3'];
+				$numberofbanners = 3;
+				
+				if ($vbulletin->options['10rb_banner4']) {
+					$banner[4] = $vbulletin->options['10rb_banner4'];
+					$numberofbanners = 4;
+					
+					if ($vbulletin->options['10rb_banner5']) {
+						$banner[5] = $vbulletin->options['10rb_banner5'];
+						$numberofbanners = 5;
+						
+						if ($vbulletin->options['10rb_banner6']) {
+							$banner[6] = $vbulletin->options['10rb_banner6'];
+							$numberofbanners = 6;
+							
+							if ($vbulletin->options['10rb_banner7']) {
+								$banner[7] = $vbulletin->options['10rb_banner7'];
+								$numberofbanners = 7;
+								
+								if ($vbulletin->options['10rb_banner8']) {
+									$banner[8] = $vbulletin->options['10rb_banner8'];
+									$numberofbanners = 8;
+									
+									if ($vbulletin->options['10rb_banner9']) {
+										$banner[9] = $vbulletin->options['10rb_banner9'];
+										$numberofbanners = 9;
+										
+										if ($vbulletin->options['10rb_banner10']) {
+											$banner[10] = $vbulletin->options['10rb_banner10'];
+											$numberofbanners = 10;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	$random = rand(1, $numberofbanners);
+	$tenrandombanners = $banner[$random];
+
+	eval('$home[$mods[\'modid\']][\'content\'] = "' . fetch_template('adv_portal_10randombanners') . '";');
+}
+
+?>]]></file>
+</moduleinfo>
